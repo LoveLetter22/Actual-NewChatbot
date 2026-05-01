@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 210 20% 6%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 15% 15%;
+
+    --primary: 212 100% 44%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 213 25% 95%;
+    --secondary-foreground: 200 15% 15%;
+
+    --muted: 213 25% 95%;
+    --muted-foreground: 210 8% 45%;
+
+    --accent: 213 25% 95%;
+    --accent-foreground: 200 15% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 216 20% 90%;
+    --input: 216 20% 90%;
+    --ring: 212 100% 44%;
+
+    --radius: 1.25rem;
+
+    --meta-blue: 212 100% 44%;
+    --meta-blue-hover: 212 100% 34%;
+    --meta-soft-gray: 213 25% 95%;
+    --meta-warm-gray: 220 14% 97%;
+    --meta-dark: 210 8% 12%;
+    --meta-slate: 207 15% 42%;
+    --meta-charcoal: 200 15% 15%;
+    --meta-divider: 216 18% 88%;
+    --meta-success: 145 68% 40%;
+    --meta-error: 350 87% 55%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 212 100% 44%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  }
+}
+
+@layer utilities {
+  .meta-pill {
+    @apply rounded-full px-6 py-2.5 text-sm font-medium tracking-tight transition-all duration-200;
+  }
+
+  .meta-shadow {
+    box-shadow: 0 12px 28px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.06);
+  }
+
+  .meta-shadow-sm {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.08);
+  }
+
+  .frosted-glass {
+    background: hsla(213, 25%, 95%, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
